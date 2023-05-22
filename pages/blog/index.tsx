@@ -31,7 +31,7 @@ const BlogsPage: FC<any> = (props) => {
       <div>Blogs page</div>
       {props.posts.map((post: any) => {
         return (
-          <Link href={`/blog/${post.slug}`}>
+          <Link key={post.slug} href={`/blog/${post.slug}`}>
             <div>{post.title}</div>
           </Link>
         );
